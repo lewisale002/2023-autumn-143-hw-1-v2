@@ -3,6 +3,25 @@ public class Problem1 {
     // Do not change signature (function name, parameter variable type and return type)
     public static int binarySearch(int[] data, int target) {
         // TODO: Add your solution
+        if (data == null || data.length == 0) {
+            return -1;
+        }
+
+        int start = 0, end = (data.length - 1);
+
+        while (start <= end) {
+            int mid = ((start + end) / 2);
+            if (data[mid] == target) {
+                return mid;
+            }
+            else if (data[mid] > target) {
+                end = (mid - 1);
+            }
+            else {
+                start = (mid + 1);
+            }
+        }
+
         return -1; // Placeholder. TODO: Replace this line with your own code.
     }
     // TODO: answers "how would you prove your code is correct?". "ChatGPT says so" doesn't count as a good answer.
