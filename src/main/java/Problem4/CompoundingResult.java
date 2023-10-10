@@ -31,6 +31,9 @@ public class CompoundingResult {
 
     @Override
     public boolean equals(Object o) {   // when is this being called? And, is "o" a good variable name?
+        /* o is not a good variable name and this is being called to see if the current object is the same as the
+         * one in the argument.
+         */
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) {
             return false;
@@ -41,7 +44,7 @@ public class CompoundingResult {
     }
 
     @Override
-    public String toString() {  // why do we need this?
+    public String toString() {  // why do we need this? To be able to print the object's variables
         return "CompoundingResult{" +
                 "invested=" + invested +
                 ", accumulated=" + accumulated +

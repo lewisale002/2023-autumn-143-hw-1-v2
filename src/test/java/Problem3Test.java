@@ -4,8 +4,7 @@
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class Problem3Test {
 
@@ -13,7 +12,23 @@ public class Problem3Test {
     // DO NOT REMOVE OR CHANGE the signature
     @Test
     public void testSumOfNonUnique() {
-        assertTrue(false); // TODO: Place-holder. Replace with your tests.
+
+        int[][] inputs = {
+                {3},
+                {3, 2},
+                {2, 3, 2},
+                {2, 4, 2, 1, 4, -5, 4},
+                {1, 1, 1, 1},
+        };
+        long[] expects = {0, 0, 4, 16, 4};
+
+        assertTrue(inputs.length == expects.length);
+        //checks that there are the same amount of inputs and expects
+
+        for (int i = 0; i < inputs.length; i++) {
+            assertEquals(Problem3.SumOfNonUnique(inputs[i]), expects[i]);
+        }
+        //checks each sum is equal to expected sum
     }
 
     @Test
@@ -22,10 +37,10 @@ public class Problem3Test {
         int[] input = new int[aLargeNumber];
 
         for (int i = 0; i < input.length; i++) {
-            input[i] = i - aLargeNumber / 2;    // does this array have any non-unique number in it?
+            input[i] = i - aLargeNumber / 2;    // does this array have any non-unique number in it? No
         }
 
-        final int expect = 0;   // why 0?
+        final int expect = 0;   // why 0? Because there are no non-unique numbers, so their sum is 0
 
         long startTime = System.nanoTime();
 
@@ -40,6 +55,7 @@ public class Problem3Test {
 
         // this test takes a bit of time to finish, ain't it?
         // try a better design in your code so this test finishes faster
-        // TODO: how many seconds did your code improve between the first version and last version of your code?
+        // how many seconds did your code improve between the first version and last version of your code?
+        // I tried a couple of different ways to speed up my code, but it made it slower. My best is about 3.5 seconds
     }
 }

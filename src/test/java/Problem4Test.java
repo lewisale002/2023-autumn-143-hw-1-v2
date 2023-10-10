@@ -196,9 +196,15 @@ public class Problem4Test {
                 // average stock market return (see shorturl.at/aHJT6)
                 add(new TestCase(1000, 300, 35, 10,
                         127000, 1003790.16f));
-                /*
-                TODO: add your ways of making a million dollar using compounding interest
-                 */
+
+                add(new TestCase(12000, 200, 11, 50,
+                        38400, 1448358.98f));
+
+                add(new TestCase(4000000, 0, 100, 1,
+                        4000000, 1081925.53f));
+
+                add(new TestCase(1000000, 100000, 25, -12,
+                        2500000, 1000000f));
             }
         };
 
@@ -215,5 +221,12 @@ public class Problem4Test {
 }
 
 /*
-    TODO: Bonus Points. Add your answer here.
+    When I am able to start putting away money to save, I will be sure to invest some of it in an account that
+    accumulates compound interest because of its incredible ability to grow. I know well the absurdity that
+    exponential growth can be, so putting my money somewhere with a reasonably high compound interest rate will grow
+    significantly over time. Another thing I've learned from compound interest growth is the value in saving money.
+    Money saved now, means more money to spend later due to interest, and this is especially true with compound
+    interest. On the flip side, I will also be very careful not to have money where I owe compound interest because
+    of how quickly I could end up owing a lot of money. Compound interest can be a weapon or a curse and in the future
+    I will be mindful of how I can get the most out of it and not end up on the wrong side of the equation.
  */

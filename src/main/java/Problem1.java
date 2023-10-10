@@ -4,22 +4,22 @@ public class Problem1 {
             return -1;
         }
 
-        int start = 0, end = (data.length - 1);
+        int start = 0, end = (data.length - 1); //start and end points of array
 
         while (start <= end) {
-            int mid = ((start + end) / 2);
-            if (data[mid] == target) {
-                return mid;
+            int middle = start + ((end - start) / 2); //the midpoint of the array
+            if (data[middle] == target) {
+                return middle;
             }
-            else if (data[mid] > target) {
-                end = (mid - 1);
+            else if (data[middle] > target) {
+                end = (middle - 1);
             }
             else {
-                start = (mid + 1);
+                start = (middle + 1);
             }
         }
 
-        return -1;
+        return -1; //target not found
     }
 
 }

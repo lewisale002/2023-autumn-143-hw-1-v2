@@ -2,23 +2,34 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
+import static org.junit.Assert.assertTrue;
+
 public class Problem2Test {
 
     @Test
     public void testBubbleSort() {
         int[][] inputs = {
                 {3, 2, 1},
-                // TODO: add more test case inputs
+                {4, 2, 8, 6},
+                {5, 5, 5},
+                {-4, 5, 3, 7, 432, 54},
+                {-4, -432, -65, -6543, -4, -3, 0},
+                {3, 4, 5}
         };
         int[][] expects = {
                 {1, 2, 3},
-                // TODO: add more test case expected sorted results
+                {2, 4, 6, 8},
+                {5, 5, 5},
+                {-4, 3, 5, 7, 54, 432},
+                {-6543, -432, -65, -4, -4, -3, 0},
+                {3, 4, 5}
         };
 
-        // TODO: add a check to verify inputs and expects have the same amount of arrays
+        assertTrue(inputs.length == expects.length);
+        //checks that there are the same amount of inputs and expects
 
         for (int i = 0; i < inputs.length; i++) {
-            // TODO: add a call to your bubble sort function here
+            Problem2.bubbleSort(inputs[i]);
 
             for (int j = 0; j < inputs[i].length; j++) {
 
