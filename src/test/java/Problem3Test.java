@@ -22,7 +22,7 @@ public class Problem3Test {
         };
         long[] expects = {0, 0, 4, 16, 4};
 
-        assertTrue(inputs.length == expects.length);
+        assertTrue(expects.length == inputs.length);
         //checks that there are the same amount of inputs and expects
 
         for (int i = 0; i < inputs.length; i++) {

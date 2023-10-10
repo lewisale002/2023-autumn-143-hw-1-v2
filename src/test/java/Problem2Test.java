@@ -25,7 +25,7 @@ public class Problem2Test {
                 {3, 4, 5}
         };
 
-        assertTrue(inputs.length == expects.length);
+        assertTrue(expects.length == inputs.length);
         //checks that there are the same amount of inputs and expects
 
         for (int i = 0; i < inputs.length; i++) {
